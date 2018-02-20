@@ -1,30 +1,40 @@
-���m�F�����F
-�P�DApache��X-UA-Compatible�Ƃ�������p�����[�^���m�F����B
-	IE=EmulateIE11 : ���IE11���[�h�Ƃ��ē��삷��B
-	IE=EmulateIE10 : ���IE10���[�h�Ƃ��ē��삷��B(�����i�s�)
-	IE=EmulateIE9 : DOCTYPE�錾�ɉ����āAIE9���[�h��Quirks���[�h(IE5)��I������B
-	IE=EmulateIE8 : DOCTYPE�錾�ɉ����āAIE8���[�h��Quirks���[�h(IE5)��I������B
-	IE=EmulateIE7 : DOCTYPE�錾�ɉ����āAIE7���[�h��Quirks���[�h(IE5)��I������B
-	IE=11 : �K��IE11���[�h��I������B
-	IE=10 : �K��IE10���[�h��I������B
-	IE=9 : �K��IE9���[�h��I������B
-	IE=8 : �K��IE8���[�h��I������B
-	IE=7 : �K��IE7���[�h��I������B
-	IE=5 : �K��IE5���[�h�Ƃ��ē��삷��B
+※確認事項：
+１．ApacheでX-UA-Compatibleという制御パラメータを確認する。
+	IE=EmulateIE11 : 常にIE11モードとして動作する。
+	IE=EmulateIE10 : 常にIE10モードとして動作する。(※製品不具合)
+	IE=EmulateIE9 : DOCTYPE宣言に応じて、IE9モードかQuirksモード(IE5)を選択する。
+	IE=EmulateIE8 : DOCTYPE宣言に応じて、IE8モードかQuirksモード(IE5)を選択する。
+	IE=EmulateIE7 : DOCTYPE宣言に応じて、IE7モードかQuirksモード(IE5)を選択する。
+	IE=11 : 必ずIE11モードを選択する。
+	IE=10 : 必ずIE10モードを選択する。
+	IE=9 : 必ずIE9モードを選択する。
+	IE=8 : 必ずIE8モードを選択する。
+	IE=7 : 必ずIE7モードを選択する。
+	IE=5 : 必ずIE5モードとして動作する。
 
-�@�� HTML�h�L�������g����X-UA-Compatible��ǉ�����
-�@�@HTML�h�L�������g���ŋL�q����ꍇ�́Ahead�v�f���̔�r�I�ŏ��ňȉ����`���܂��B
+　★ HTMLドキュメント内にX-UA-Compatibleを追加する
+　　HTMLドキュメント内で記述する場合は、head要素内の比較的最初で以下を定義します。
 
-�@�@<meta http-equiv="X-UA-Compatible" content="IE=11">
+　　<meta http-equiv="X-UA-Compatible" content="IE=11">
 
-�@�� Apache��HTTP���X�|���X�w�b�_��X-UA-Compatible��ǉ�����
-�@�@�u/etc/httpd/httpd.conf�v�ɂāA��ԍŌ�Ɉȉ��̓��e��ǋL���ĉ������B
+　★ ApacheでHTTPレスポンスヘッダにX-UA-Compatibleを追加する
+　　「/etc/httpd/httpd.conf」にて、一番最後に以下の内容を追記して下さい。
 
 	LoadModule headers_module modules/mod_headers.so
 	<IfModule headers_module>
 	   Header set X-UA-Compatible: IE=11
 	</IfModule>
 
+
+
+
+
+★リリース手順書：
+１．Apacheのconfファイルで以下のモジュールを有効にしてください。
+　・LoadModule proxy_module modules/mod_proxy.so
+　・LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
+　・LoadModule rewrite_module modules/mod_rewrite.so
+　・LoadModule mime_module modules/mod_mime.so
 
 
 
