@@ -10,3 +10,36 @@ https://tutorialzine.com/2013/05/mini-ajax-file-upload-form
 https://github.com/blueimp/jQuery-File-Upload/wiki/Options#callback-options
 
 https://stackoverflow.com/questions/17451629/maxfilesize-and-acceptfiletypes-in-blueimp-file-upload-plugin-do-not-work-why
+
+
+
+豊田現場の進捗（12月9日）を報告致します。
+ 
+【案件名】
+　　生産管理・販売システム<ERP向け>(日本国内向け、インドネシア向け)
+ 
+【期限】
+　　17年４月~17年11月
+　　12月からはLixil現場。
+
+【体制】
+　　全チーム5人で、リーダー1名(TIS)、メンバー4名(TIS2名、HANAWA2名)
+
+【作業内容】
+　  　保守と機能追加対応です。問題点、課題等をリーダーから教えてもらって、調査→レビュー→設計→レビュー→開発&UT→検証→報告まで。リリースはリーダーのほうで実施。
+
+【開発環境】
+　　言語は、vb.net(Windows Form向け)。ほかにイントラーマット向けのJava、Js、Html。
+　　DBは、Sql serverとOracle。
+　　ほかに、パッケージもある。OracleのJDE、イントラマット、SPREAD for Windows Forms。
+ 
+【進捗状況】
+　　　プロジェクトはあんまり順調ではない。自分担当の作業はオンスけー。リリースは12月中旬。
+
+【その他】
+　　情報共有ですが、oracleを10gから11gへバージョンアップすると、予想外の問題がある。特に,ＳＱＬ文のSelect処理がパフォーマンスが相当悪い。原因不明。
+ 
+【懸案・問題等】 
+　　特になし。
+
+以上です。
