@@ -117,3 +117,31 @@ public class MySpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     ...
 }
+
+■認証済みのユーザ情報を引き継ぐ
+コントローラに定義したメソッドの引数に@AuthenticationPrincipalアノテーションを付与します。 
+こうすると、その引数に認証したユーザ情報が自動的に渡されるようになります。
+
+■Autoログイン
+public boolean autoLogin( String username, String password, HttpServletRequest request) {
+       
+        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username, password);
+ 
+        Authentication authentication = authManager.authenticate(token);
+ 
+        SecurityContextHolder.getContext().setAuthentication(authentication );
+ 
+        //this step is important, otherwise the new login is not in session which is required by Spring Security
+        request.getSession().setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
+        
+        return true;
+    }
+   
+  ※参考サイト：　https://blog.tagbangers.co.jp/2014/08/31/spring-security-dynamic-security-context-repository
+
+■SessionTimeout対応  　　　　　　　　
+　※参考サイト：　http://progmemo.wp.xdomain.jp/archives/847
+ 　　　　　　　　https://ishiis.net/2016/08/27/spring-security-custom-authentication/
+  
+  
+  
