@@ -1,0 +1,26 @@
+■インスト－ルマニュアル
+https://help.asteria.com/documentation/warp/ja/1712/InstallGuide.pdf
+※ASTERIA WARP サーバーの実行には Java8 64bit 版が必要です。
+   ASTERIA WARP フローデザイナーの実行には Java8 32bit 版が必要です。
+
+※スタンドアローン的にASTERIA WARPのサーバーとクライアントを1つのPCにインストールする場合
+　32bit、64bit両方のJAVAが必要になります。
+　下記サイトからオフラインにて入手する方法がスムーズにインストールできるかもしれません。
+   http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html
+
+■ASTERIA 「使い方マニュアル」
+https://support.asteria.com/hc/ja/categories/204090467
+
+■その他マニュアル、FAQ、ドキュメント類URL
+https://support.asteria.com/hc/ja
+
+■DBとの接続準備について
+https://www.infoteria.com/jp/warp/blog/asteria-warp/23921.html
+http://asteria.jp/documentation/warp/current/flow/designer/flowservice/connection_rdb.html
+
+※その他ASTERIA導入の体験記もご参照ください。
+https://www.infoteria.com/jp/warp/blog/asteria%E4%BD%93%E9%A8%93%E8%A8%98　
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+どうぞASTERIA WARPご評価の程、宜しくお願い申し上げます。
+
